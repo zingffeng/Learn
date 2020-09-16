@@ -101,9 +101,8 @@ Activity类中定义了7个回调方法，覆盖了活动生命周期的每一�
     如果 Activity 恢复与用户的交互，则后接 onRestart()，如果 Activity 被销毁，则后接 onDestroy()。
 + **onDestory()**           
     在 Activity 被销毁前调用。这是 Activity 将收到的最后调用。 当 Activity 结束（有人对 Activity 调用了 finish()），或系统为节省空间而暂时销毁该 Activity 实例时，可能会调用它。 您可以通过 isFinishing() 方法区分这两种情形。
-    
 
-![my-logo.png](https://github.com/zingfengQAQ/LearnQAQ/blob/master/image/activity_lifecycle.png)        
+![my-logo.png](https://github.com/zingffeng/Learn/blob/master/images/activity_lifecycle.png)        
 
 #### 活动的启动模式        
 > 启动模式有四种，分别是 **standard、singleTop、singleTask和singleInstance**
@@ -116,10 +115,3 @@ Activity类中定义了7个回调方法，覆盖了活动生命周期的每一�
     这种模式很好的解决了重复创建栈顶活动的问题。每次启动给活动时系统首先会在返回栈中检查是否存在该活动的实例，如果发现已经存在则直接使用该实例，并把在这个活动之上的所有活动统统出栈，如果没有发现就会创建一个新的活动实例。
 + **singleInstance模式**     
     在这种模式下会有一个单独的返回栈来管理这个活动，不管是哪个应用程序来访问这个程序，都共用的同一个返回栈。
-
-
- 
-
-
-
-
